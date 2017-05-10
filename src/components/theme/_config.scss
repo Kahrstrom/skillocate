@@ -1,0 +1,44 @@
+@import "~react-toolbox/lib/colors";
+
+$break-small: 764px;
+$break-large: 1200px;
+
+$color-primary: #2A4F6F;//#355C7D;
+$color-primary-dark: #1F4667;
+$color-accent-light: #F8B195;
+$color-accent-dark: #C06C84;
+$color-accent: #F67280;
+
+$text-color-white: #FFF;
+$text-color-dark: #343434;
+
+$unit: 1rem;
+
+$padding-normal: 1.6*$unit;
+$padding-small: 0.8*$unit;
+
+$margin-normal: 1.6*$unit;
+$margin-small: 0.8*$unit;
+
+.container {
+   margin-top: $margin-normal;
+   margin-bottom: $margin-normal;
+}
+
+.bar {
+  &:before, &:after {
+    background-color: $color-accent-light;
+  }
+}
+
+.inputElement {
+  &:focus:not([disabled]):not([readonly]) {
+    ~ .label:not(.fixed) {
+      color: $color-accent-light;
+    }
+    ~ .icon {
+      color: $color-accent-light;
+    }
+  }
+}
+

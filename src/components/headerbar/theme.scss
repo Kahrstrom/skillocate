@@ -1,0 +1,30 @@
+.headerBar {
+   background-color: $color-primary;
+   width: 100%;
+   top: 0px;
+   height: auto;
+   padding-top: 2*$padding-normal;
+   padding-bottom: 2*$padding-normal;
+   color: $text-color-white;
+   box-shadow: 0 2px 5px rgba(0,0,0,.26);
+
+   > .innerContainer {
+      margin-top: $margin-normal;
+      margin-left:auto;
+      margin-right:auto;
+      text-align: center;
+   }
+}
+
+.innerContainer {
+   width: auto;
+   > * {
+      margin-left:auto;
+      margin-right:auto;
+      text-align: center;
+   }
+}
+
+.subtitle {
+   color: $color-accent-light;
+}

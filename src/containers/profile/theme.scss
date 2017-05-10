@@ -1,0 +1,25 @@
+.tagAvatar {
+   background-color: $color-accent-light;
+}
+
+.chip {
+  line-height: 3rem;
+}
+
+.denseList {
+  > * {
+    height: 5rem;
+  }
+}
+
+.containerRow{
+  margin-bottom: $margin-normal;
+}
+
+.icon {
+    margin-left: calc(50% + 150px);
+    > * {
+      color: #FFF !important;
+    }
+            
+}

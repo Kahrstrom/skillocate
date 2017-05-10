@@ -1,0 +1,17 @@
+
+.cardTitle {
+   font-size: 2.4rem;
+   > * {
+      width: 100%;
+   }
+}
+
+.form {
+   margin-left: $margin-normal;
+   margin-right: $margin-normal;
+}
+
+.editButton {
+   float: right !important;
+   margin-top: -$margin-normal;
+}
