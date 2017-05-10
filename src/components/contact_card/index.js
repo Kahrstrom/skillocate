@@ -23,6 +23,14 @@ export default class ContactCard extends Component {
     this.setState({edited: !this.state.edited});
   }
 
+  handleOpenMaps() {
+    window.open(`https://www.google.se/maps/place/${this.state.address.replace(/ /g,'+')}`, '_blank');
+  }
+
+  handleSendEmail() {
+    window.location.href = `mailto:${this.state.email}`;
+  }
+
     render() {
 
       return (
@@ -30,8 +38,8 @@ export default class ContactCard extends Component {
               <CardTitle className={Theme.cardTitle}>Kontaktuppgifter </CardTitle>
               <CardText>
               <List selectable ripple>
-                <ListItem caption={this.state.address} leftIcon="place" />
-                <ListItem caption={this.state.email} leftIcon="email" />
+                <ListItem onClick={this.handleOpenMaps.bind(this)} caption={this.state.address} leftIcon="place" />
+                <ListItem onClick={this.handleSendEmail.bind(this)} caption={this.state.email} leftIcon="email" />
                 <ListItem caption={this.state.phone} leftIcon="phone" />
               </List>
             </CardText>
