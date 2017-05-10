@@ -1,7 +1,3 @@
-.icon {
-   line-height: 160px;
-   font-size: 72pt;
-}
 
 .drawer {
    border: 0px !important;
@@ -10,4 +6,14 @@
 
 .drawerForm {
    margin: $margin-normal;
+}
+
+.iconWhite {
+    position: absolute;
+    top: 0.5*$margin-normal;
+    right: 0.5*$margin-normal;
+    > * {
+      color: #FFF !important;
+    }
+            
 }

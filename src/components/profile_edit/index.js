@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Drawer from 'react-toolbox/lib/drawer';
 import FontIcon from 'react-toolbox/lib/font_icon';
+import { IconButton} from 'react-toolbox/lib/button';
 import HeaderBar from '../headerbar';
 import { Field, reduxForm } from 'redux-form';
 import FormInput from '../form_input';
@@ -40,13 +41,12 @@ class ProfileEdit extends Component {
                   autoHideDuration={200}
                   style={{height: '100vh'}}>
                <HeaderBar
+                  actions={
+                   <IconButton icon='close' className={Theme.iconWhite} onClick={this.props.handleToggle}/>
+                  }
                   title={this.props.profile.name}
                   subtitle={this.props.profile.title}/>
-               {/*<Tabs index={this.props.tabIndex} onChange={this.props.handTabsChanged} fixed>
-                  <Tab label='General'><small>First Content</small></Tab>
-                  <Tab label='Contact'><small>Second Content</small></Tab>
-                  <Tab label='About'><small>Third Content</small></Tab>
-               </Tabs>*/}
+                  
                <form className={Theme.drawerForm}>
                   <Field component={FormInput} type="text" label="Förnamn" name="firstname" {...firstname} />
                   <Field component={FormInput} type="text" label="Efternamn" name="lastname" {...lastname} />
